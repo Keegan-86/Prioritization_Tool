@@ -1,81 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Initiative Prioritization Tool</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="app-container">
-        <h1>Initiative Prioritization Tool</h1>
+<form id="initiative-form">
+    <div class="input-row">
+        <div class="input-group">
+            <label for="key-result">Key Result</label>
+            <input type="text" id="key-result" name="key-result" required>
+        </div>
 
-        <form id="initiative-form">
-            <div class="input-group">
-                <label for="key-result">Key Result</label>
-                <input type="text" id="key-result" name="key-result" required>
-            </div>
-
-            <div class="input-group">
-                <label for="initiative-name">Initiative Name</label>
-                <input type="text" id="initiative-name" name="initiative-name" required>
-            </div>
-
-            <div class="input-group">
-                <label for="interdependency">Interdependency Impact</label>
-                <select id="interdependency" name="interdependency">
-                    <option value="5">High</option>
-                    <option value="1">Low</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="synergistic">Synergistic Impact</label>
-                <select id="synergistic" name="synergistic">
-                    <option value="5">High</option>
-                    <option value="1">Low</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="speed">Speed of Value Delivery</label>
-                <select id="speed" name="speed">
-                    <option value="4">High Impact, Low Effort</option>
-                    <option value="3">High Impact, High Effort</option>
-                    <option value="2">Low Impact, Low Effort</option>
-                    <option value="1">Low Impact, High Effort</option>
-                </select>
-            </div>
-
-            <div class="input-group">
-                <label for="customer">Customer Impact & Cost</label>
-                <select id="customer" name="customer">
-                    <option value="4">High Impact, Low Cost</option>
-                    <option value="3">High Impact, High Cost</option>
-                    <option value="2">Low Impact, Low Cost</option>
-                    <option value="1">Low Impact, High Cost</option>
-                </select>
-            </div>
-
-            <button type="submit" class="primary-button">Add Initiative</button>
-        </form>
-
-        <h2>Prioritized Initiatives</h2>
-        <table id="initiatives-table">
-            <thead>
-                <tr>
-                    <th>Key Result</th>
-                    <th>Initiative Name</th>
-                    <th>Total Score</th>
-                    <th>Rank</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Dynamically generated rows will go here -->
-            </tbody>
-        </table>
+        <div class="input-group">
+            <label for="initiative-name">Initiative Name</label>
+            <input type="text" id="initiative-name" name="initiative-name" required>
+        </div>
     </div>
 
-    <script src="app.js"></script>
-</body>
-</html>
+    <div class="input-row">
+        <div class="input-group">
+            <label for="interdependency">Interdependency Impact</label>
+            <input type="range" id="interdependency" name="interdependency" min="1" max="5" value="3" oninput="document.getElementById('interdependencyValue').textContent = this.value">
+            <span id="interdependencyValue">3</span>
+        </div>
+
+        <div class="input-group">
+            <label for="synergistic">Synergistic Impact</label>
+            <input type="range" id="synergistic" name="synergistic" min="1" max="5" value="3" oninput="document.getElementById('synergisticValue').textContent = this.value">
+            <span id="synergisticValue">3</span>
+        </div>
+
+        <div class="input-group">
+            <label for="speed">Speed of Value Delivery</label>
+            <input type="range" id="speed" name="speed" min="1" max="4" value="3" oninput="document.getElementById('speedValue').textContent = this.value">
+            <span id="speedValue">3</span>
+        </div>
+
+        <div class="input-group">
+            <label for="customer">Customer Impact & Cost</label>
+            <input type="range" id="customer" name="customer" min="1" max="4" value="3" oninput="document.getElementById('customerValue').textContent = this.value">
+            <span id="customerValue">3</span>
+        </div>
+    </div>
+
+    <button type="submit" class="primary-button">Add Initiative</button>
+</form>
