@@ -1,45 +1,100 @@
-document.getElementById('initiative-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    console.log('Form submitted'); // Check if this message shows up in the console
-
-    const keyResult = document.getElementById('key-result').value;
-    const initiativeName = document.getElementById('initiative-name').value;
-    const interdependency = parseInt(document.getElementById('interdependency').value);
-    const synergistic = parseInt(document.getElementById('synergistic').value);
-    const speed = parseInt(document.getElementById('speed').value);
-    const customer = parseInt(document.getElementById('customer').value);
-
-    const totalScore = interdependency + synergistic + speed + customer;
-    const initiative = { keyResult, initiativeName, totalScore };
-
-    addInitiativeToTable(initiative);
-    sortTableByScore();
-
-    this.reset(); // Clear the form after submission
-});
-
-function addInitiativeToTable(initiative) {
-    const tableBody = document.getElementById('initiatives-table').getElementsByTagName('tbody')[0];
-    const newRow = tableBody.insertRow();
-
-    newRow.insertCell(0).textContent = initiative.keyResult;
-    newRow.insertCell(1).textContent = initiative.initiativeName;
-    newRow.insertCell(2).textContent = initiative.totalScore;
-    newRow.insertCell(3).textContent = ''; // Rank will be updated after sorting
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-function sortTableByScore() {
-    const table = document.getElementById('initiatives-table');
-    const rows = Array.from(table.getElementsByTagName('tbody')[0].rows);
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #F2F2F7;
+    color: #1C1C1E;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-    rows.sort((a, b) => {
-        const scoreA = parseInt(a.cells[2].textContent);
-        const scoreB = parseInt(b.cells[2].textContent);
-        return scoreB - scoreA; // Sort descending
-    });
+.app-container {
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+}
 
-    rows.forEach((row, index) => {
-        row.cells[3].textContent = index + 1; // Update rank
-        table.getElementsByTagName('tbody')[0].appendChild(row); // Reorder rows
-    });
+h1, h2 {
+    font-weight: 600;
+    color: #111111;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D1D6;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    background-color: #F9F9FB;
+    font-size: 16px;
+}
+
+label {
+    font-size: 14px;
+    color: #8E8E93;
+}
+
+.primary-button {
+    width: 100%;
+    background-color: #007AFF;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.primary-button:hover {
+    background-color: #005BB5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #E5E5EA;
+}
+
+th, td {
+    padding: 14px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #F2F2F7;
+    color: #111111;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #F9F9FB;
+}
+
+tbody tr:hover {
+    background-color: #E5E5EA;
+    cursor: pointer;
 }
