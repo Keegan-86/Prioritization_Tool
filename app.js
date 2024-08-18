@@ -13,6 +13,8 @@ document.getElementById('initiative-form').addEventListener('submit', function(e
 
     addInitiativeToTable(initiative);
     sortTableByScore();
+
+    this.reset(); // Clear the form after submission
 });
 
 function addInitiativeToTable(initiative) {
