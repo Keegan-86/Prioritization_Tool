@@ -40,3 +40,11 @@ function sortTableByScore() {
         table.getElementsByTagName('tbody')[0].appendChild(row); // Reorder rows
     });
 }
+
+// Update displayed slider values
+const sliders = document.querySelectorAll('input[type="range"]');
+sliders.forEach(slider => {
+    slider.addEventListener('input', function() {
+        document.getElementById(`${slider.id}-value`).textContent = slider.value;
+    });
+});
