@@ -3,29 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A tool for prioritizing initiatives based on various impact factors.">
-    <meta name="keywords" content="initiative, prioritization, tool, business, management">
     <title>Initiative Prioritization Tool</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="app-container">
+    <div class="app-container">
         <h1>Initiative Prioritization Tool</h1>
 
         <form id="initiative-form">
             <div class="input-group">
                 <label for="key-result">Key Result</label>
-                <input type="text" id="key-result" name="key-result" required aria-label="Key Result">
+                <input type="text" id="key-result" name="key-result" required>
             </div>
 
             <div class="input-group">
                 <label for="initiative-name">Initiative Name</label>
-                <input type="text" id="initiative-name" name="initiative-name" required aria-label="Initiative Name">
+                <input type="text" id="initiative-name" name="initiative-name" required>
             </div>
 
             <div class="input-group">
                 <label for="interdependency">Interdependency Impact</label>
-                <select id="interdependency" name="interdependency" aria-label="Interdependency Impact">
+                <select id="interdependency" name="interdependency">
                     <option value="5">High</option>
                     <option value="1">Low</option>
                 </select>
@@ -33,7 +31,7 @@
 
             <div class="input-group">
                 <label for="synergistic">Synergistic Impact</label>
-                <select id="synergistic" name="synergistic" aria-label="Synergistic Impact">
+                <select id="synergistic" name="synergistic">
                     <option value="5">High</option>
                     <option value="1">Low</option>
                 </select>
@@ -41,7 +39,7 @@
 
             <div class="input-group">
                 <label for="speed">Speed of Value Delivery</label>
-                <select id="speed" name="speed" aria-label="Speed of Value Delivery">
+                <select id="speed" name="speed">
                     <option value="4">High Impact, Low Effort</option>
                     <option value="3">High Impact, High Effort</option>
                     <option value="2">Low Impact, Low Effort</option>
@@ -51,7 +49,7 @@
 
             <div class="input-group">
                 <label for="customer">Customer Impact & Cost</label>
-                <select id="customer" name="customer" aria-label="Customer Impact & Cost">
+                <select id="customer" name="customer">
                     <option value="4">High Impact, Low Cost</option>
                     <option value="3">High Impact, High Cost</option>
                     <option value="2">Low Impact, Low Cost</option>
@@ -59,7 +57,7 @@
                 </select>
             </div>
 
-            <button type="submit" class="primary-button" aria-label="Add Initiative">Add Initiative</button>
+            <button type="submit" class="primary-button">Add Initiative</button>
         </form>
 
         <h2>Prioritized Initiatives</h2>
@@ -76,7 +74,7 @@
                 <!-- Dynamically generated rows will go here -->
             </tbody>
         </table>
-    </main>
+    </div>
 
     <script src="app.js"></script>
 </body>
