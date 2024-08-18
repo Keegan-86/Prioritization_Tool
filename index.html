@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Initiative Prioritization Tool</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
 </head>
 <body>
     <div class="app-container">
@@ -24,27 +25,26 @@
             <div class="input-group slider-group">
                 <label for="interdependency">Interdependency Impact</label>
                 <input type="range" id="interdependency" name="interdependency" min="1" max="5" value="3">
-                <span id="interdependency-value">3</span>
+                <span id="interdependency-value">Medium</span>
             </div>
 
             <div class="input-group slider-group">
                 <label for="synergistic">Synergistic Impact</label>
                 <input type="range" id="synergistic" name="synergistic" min="1" max="5" value="3">
-                <span id="synergistic-value">3</span>
+                <span id="synergistic-value">Medium</span>
             </div>
 
             <div class="input-group slider-group">
                 <label for="speed">Speed of Value Delivery</label>
                 <input type="range" id="speed" name="speed" min="1" max="4" value="2">
-                <span id="speed-value">2</span>
+                <span id="speed-value">Low Impact, Low Effort</span>
             </div>
 
             <div class="input-group slider-group">
                 <label for="customer">Customer Impact & Cost</label>
                 <input type="range" id="customer" name="customer" min="1" max="4" value="2">
-                <span id="customer-value">2</span>
+                <span id="customer-value">Low Impact, Low Cost</span>
             </div>
-<button id="extract-button" class="extract-button">Extract Data</button>
 
             <button type="submit" class="primary-button">Add Initiative</button>
         </form>
@@ -63,6 +63,9 @@
                 <!-- Dynamically generated rows will go here -->
             </tbody>
         </table>
+
+        <!-- Extract Data Button -->
+        <button id="extract-button" class="extract-button">Extract Data</button>
     </div>
 
     <script src="app.js"></script>
