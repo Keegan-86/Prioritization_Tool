@@ -1,7 +1,6 @@
 document.getElementById('initiative-form').addEventListener('submit', function(event) {
     event.preventDefault();
-    console.log('Form submitted'); // Check if this message shows up in the console
-
+    
     const keyResult = document.getElementById('key-result').value;
     const initiativeName = document.getElementById('initiative-name').value;
     const interdependency = parseInt(document.getElementById('interdependency').value);
@@ -14,8 +13,6 @@ document.getElementById('initiative-form').addEventListener('submit', function(e
 
     addInitiativeToTable(initiative);
     sortTableByScore();
-
-    this.reset(); // Clear the form after submission
 });
 
 function addInitiativeToTable(initiative) {
