@@ -21,40 +21,28 @@
                 <input type="text" id="initiative-name" name="initiative-name" required>
             </div>
 
-            <div class="input-group">
+            <div class="input-group slider-group">
                 <label for="interdependency">Interdependency Impact</label>
-                <select id="interdependency" name="interdependency">
-                    <option value="5">High</option>
-                    <option value="1">Low</option>
-                </select>
+                <input type="range" id="interdependency" name="interdependency" min="1" max="5" value="3">
+                <span id="interdependency-value">3</span>
             </div>
 
-            <div class="input-group">
+            <div class="input-group slider-group">
                 <label for="synergistic">Synergistic Impact</label>
-                <select id="synergistic" name="synergistic">
-                    <option value="5">High</option>
-                    <option value="1">Low</option>
-                </select>
+                <input type="range" id="synergistic" name="synergistic" min="1" max="5" value="3">
+                <span id="synergistic-value">3</span>
             </div>
 
-            <div class="input-group">
+            <div class="input-group slider-group">
                 <label for="speed">Speed of Value Delivery</label>
-                <select id="speed" name="speed">
-                    <option value="4">High Impact, Low Effort</option>
-                    <option value="3">High Impact, High Effort</option>
-                    <option value="2">Low Impact, Low Effort</option>
-                    <option value="1">Low Impact, High Effort</option>
-                </select>
+                <input type="range" id="speed" name="speed" min="1" max="4" value="2">
+                <span id="speed-value">2</span>
             </div>
 
-            <div class="input-group">
+            <div class="input-group slider-group">
                 <label for="customer">Customer Impact & Cost</label>
-                <select id="customer" name="customer">
-                    <option value="4">High Impact, Low Cost</option>
-                    <option value="3">High Impact, High Cost</option>
-                    <option value="2">Low Impact, Low Cost</option>
-                    <option value="1">Low Impact, High Cost</option>
-                </select>
+                <input type="range" id="customer" name="customer" min="1" max="4" value="2">
+                <span id="customer-value">2</span>
             </div>
 
             <button type="submit" class="primary-button">Add Initiative</button>
