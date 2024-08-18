@@ -90,7 +90,7 @@ table, th, td {
 }
 
 th, td {
-    padding: 14px;
+    padding: 16px 20px;  /* Increased padding for better spacing */
     text-align: left;
     font-size: 14px;
 }
