@@ -11,54 +11,50 @@
         <h1>Initiative Prioritization Tool</h1>
 
         <form id="initiative-form">
-            <div class="input-row">
-                <div class="input-group">
-                    <label for="key-result">Key Result</label>
-                    <input type="text" id="key-result" name="key-result" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="initiative-name">Initiative Name</label>
-                    <input type="text" id="initiative-name" name="initiative-name" required>
-                </div>
+            <div class="input-group">
+                <label for="key-result">Key Result</label>
+                <input type="text" id="key-result" name="key-result" required>
             </div>
 
-            <div class="input-row">
-                <div class="input-group">
-                    <label for="interdependency">Interdependency Impact</label>
-                    <select id="interdependency" name="interdependency">
-                        <option value="5">High</option>
-                        <option value="1">Low</option>
-                    </select>
-                </div>
+            <div class="input-group">
+                <label for="initiative-name">Initiative Name</label>
+                <input type="text" id="initiative-name" name="initiative-name" required>
+            </div>
 
-                <div class="input-group">
-                    <label for="synergistic">Synergistic Impact</label>
-                    <select id="synergistic" name="synergistic">
-                        <option value="5">High</option>
-                        <option value="1">Low</option>
-                    </select>
-                </div>
+            <div class="input-group">
+                <label for="interdependency">Interdependency Impact</label>
+                <select id="interdependency" name="interdependency">
+                    <option value="5">High</option>
+                    <option value="1">Low</option>
+                </select>
+            </div>
 
-                <div class="input-group">
-                    <label for="speed">Speed of Value Delivery</label>
-                    <select id="speed" name="speed">
-                        <option value="4">High Impact, Low Effort</option>
-                        <option value="3">High Impact, High Effort</option>
-                        <option value="2">Low Impact, Low Effort</option>
-                        <option value="1">Low Impact, High Effort</option>
-                    </select>
-                </div>
+            <div class="input-group">
+                <label for="synergistic">Synergistic Impact</label>
+                <select id="synergistic" name="synergistic">
+                    <option value="5">High</option>
+                    <option value="1">Low</option>
+                </select>
+            </div>
 
-                <div class="input-group">
-                    <label for="customer">Customer Impact & Cost</label>
-                    <select id="customer" name="customer">
-                        <option value="4">High Impact, Low Cost</option>
-                        <option value="3">High Impact, High Cost</option>
-                        <option value="2">Low Impact, Low Cost</option>
-                        <option value="1">Low Impact, High Cost</option>
-                    </select>
-                </div>
+            <div class="input-group">
+                <label for="speed">Speed of Value Delivery</label>
+                <select id="speed" name="speed">
+                    <option value="4">High Impact, Low Effort</option>
+                    <option value="3">High Impact, High Effort</option>
+                    <option value="2">Low Impact, Low Effort</option>
+                    <option value="1">Low Impact, High Effort</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label for="customer">Customer Impact & Cost</label>
+                <select id="customer" name="customer">
+                    <option value="4">High Impact, Low Cost</option>
+                    <option value="3">High Impact, High Cost</option>
+                    <option value="2">Low Impact, Low Cost</option>
+                    <option value="1">Low Impact, High Cost</option>
+                </select>
             </div>
 
             <button type="submit" class="primary-button">Add Initiative</button>
@@ -78,8 +74,6 @@
                 <!-- Dynamically generated rows will go here -->
             </tbody>
         </table>
-
-        <button id="export-button" class="primary-button">Export to Excel</button>
     </div>
 
     <script src="app.js"></script>
