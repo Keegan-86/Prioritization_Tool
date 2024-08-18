@@ -41,10 +41,45 @@ function sortTableByScore() {
     });
 }
 
-// Update displayed slider values
+// Slider value to description mappings
+const descriptions = {
+    interdependency: {
+        1: "Low",
+        2: "Low-Medium",
+        3: "Medium",
+        4: "Medium-High",
+        5: "High"
+    },
+    synergistic: {
+        1: "Low",
+        2: "Low-Medium",
+        3: "Medium",
+        4: "Medium-High",
+        5: "High"
+    },
+    speed: {
+        1: "Low Impact, High Effort",
+        2: "Low Impact, Low Effort",
+        3: "High Impact, High Effort",
+        4: "High Impact, Low Effort"
+    },
+    customer: {
+        1: "Low Impact, High Cost",
+        2: "Low Impact, Low Cost",
+        3: "High Impact, High Cost",
+        4: "High Impact, Low Cost"
+    }
+};
+
+// Update displayed slider descriptions
 const sliders = document.querySelectorAll('input[type="range"]');
 sliders.forEach(slider => {
     slider.addEventListener('input', function() {
-        document.getElementById(`${slider.id}-value`).textContent = slider.value;
+        const description = descriptions[slider.name][slider.value];
+        document.getElementById(`${slider.id}-value`).textContent = description;
     });
+
+    // Initialize the description display with the default value
+    const initialDescription = descriptions[slider.name][slider.value];
+    document.getElementById(`${slider.id}-value`).textContent = initialDescription;
 });
