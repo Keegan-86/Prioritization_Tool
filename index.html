@@ -11,42 +11,42 @@
     <div class="app-container">
         <h1>Initiative Prioritization Tool</h1>
 
-        <form id="initiative-form">
-            <div class="input-group">
+        <form id="initiative-form" class="grid-form">
+            <div class="input-group grid-item">
                 <label for="key-result">Key Result</label>
                 <input type="text" id="key-result" name="key-result" required>
             </div>
 
-            <div class="input-group">
+            <div class="input-group grid-item">
                 <label for="initiative-name">Initiative Name</label>
                 <input type="text" id="initiative-name" name="initiative-name" required>
             </div>
 
-            <div class="input-group slider-group">
+            <div class="input-group grid-item">
                 <label for="interdependency">Interdependency Impact</label>
                 <input type="range" id="interdependency" name="interdependency" min="1" max="5" value="3">
                 <span id="interdependency-value">Medium</span>
             </div>
 
-            <div class="input-group slider-group">
+            <div class="input-group grid-item">
                 <label for="synergistic">Synergistic Impact</label>
                 <input type="range" id="synergistic" name="synergistic" min="1" max="5" value="3">
                 <span id="synergistic-value">Medium</span>
             </div>
 
-            <div class="input-group slider-group">
+            <div class="input-group grid-item">
                 <label for="speed">Speed of Value Delivery</label>
                 <input type="range" id="speed" name="speed" min="1" max="4" value="2">
                 <span id="speed-value">Low Impact, Low Effort</span>
             </div>
 
-            <div class="input-group slider-group">
+            <div class="input-group grid-item">
                 <label for="customer">Customer Impact & Cost</label>
                 <input type="range" id="customer" name="customer" min="1" max="4" value="2">
                 <span id="customer-value">Low Impact, Low Cost</span>
             </div>
 
-            <button type="submit" class="primary-button">Add Initiative</button>
+            <button type="submit" class="primary-button grid-item">Add Initiative</button>
         </form>
 
         <h2>Prioritized Initiatives</h2>
