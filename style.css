@@ -3,11 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f8fc;
     color: #333;
     padding: 20px;
     display: flex;
@@ -19,11 +20,12 @@ body {
 .app-container {
     position: relative;
     background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 16px; /* Increased border-radius for a more rounded look */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* More pronounced shadow for depth */
     padding: 40px;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
 }
 
 h1, h2 {
@@ -35,24 +37,25 @@ h1, h2 {
 
 input[type="text"], select {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-top: 8px;
-    margin-bottom: 20px;
-    background-color: #fafafa;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* Rounded corners for input fields */
+    margin-top: 12px;
+    margin-bottom: 24px; /* Increased margin for more spacing between elements */
+    background-color: #f9f9f9;
     font-size: 16px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
 }
 
 input[type="text"]:focus, select:focus {
     border-color: #007bff;
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.2); /* Subtle shadow on focus */
 }
 
 label {
     font-size: 16px;
     color: #555;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     display: block;
 }
 
@@ -62,7 +65,7 @@ label {
     color: white;
     padding: 14px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px; /* Rounded corners for buttons */
     font-size: 16px;
     cursor: pointer;
     margin-top: 20px;
@@ -73,16 +76,17 @@ label {
 
 .primary-button:hover {
     background-color: #0056b3;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 12px rgba(0, 91, 179, 0.2); /* Smooth hover shadow */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
-    border-radius: 8px;
+    border-radius: 12px; /* Rounded corners for the table */
     overflow: hidden;
     background-color: #ffffff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for the table */
 }
 
 table, th, td {
@@ -90,7 +94,7 @@ table, th, td {
 }
 
 th, td {
-    padding: 16px 20px;  /* Increased padding for better spacing */
+    padding: 16px 20px;
     text-align: left;
     font-size: 14px;
 }
@@ -101,11 +105,11 @@ th {
 }
 
 tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #fafafa;
 }
 
 tbody tr:hover {
-    background-color: #eaeaea;
+    background-color: #f1f1f1;
     cursor: pointer;
 }
 
@@ -121,7 +125,7 @@ tbody tr:hover {
     flex: 2;
     -webkit-appearance: none;
     appearance: none;
-    height: 12px;
+    height: 10px;
     background: #ddd;
     border-radius: 5px;
     outline: none;
@@ -172,9 +176,9 @@ tbody tr:hover {
     margin-top: 20px;
     background-color: #28a745;
     color: white;
-    padding: 12px 24px;
+    padding: 14px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px; /* Rounded corners for the extract button */
     font-size: 16px;
     cursor: pointer;
     font-weight: 600;
@@ -184,5 +188,5 @@ tbody tr:hover {
 
 .extract-button:hover {
     background-color: #218838;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 12px rgba(0, 91, 179, 0.2); /* Smooth hover shadow */
 }
