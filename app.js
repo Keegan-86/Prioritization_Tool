@@ -86,10 +86,7 @@ sliders.forEach(slider => {
 
 // Extract table data to Excel
 document.getElementById('extract-button').addEventListener('click', function() {
-    // Reference the table
     var table = document.getElementById('initiatives-table');
     var wb = XLSX.utils.table_to_book(table, {sheet: "Initiatives"});
-
-    // Create a downloadable Excel file
     XLSX.writeFile(wb, 'InitiativesData.xlsx');
 });
