@@ -35,13 +35,23 @@ h1, h2 {
     margin-bottom: 30px;
 }
 
+/* Grid Layout for the Form */
+.grid-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+}
+
+.grid-item {
+    grid-column: span 2;
+}
+
 input[type="text"], select {
     width: 100%;
     padding: 14px;
     border: 1px solid #ddd;
     border-radius: 12px; /* Rounded corners for input fields */
-    margin-top: 12px;
-    margin-bottom: 24px; /* Increased margin for more spacing between elements */
     background-color: #f9f9f9;
     font-size: 16px;
     transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
@@ -68,10 +78,10 @@ label {
     border-radius: 12px; /* Rounded corners for buttons */
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
     font-weight: 600;
     text-transform: uppercase;
     transition: background-color 0.3s, box-shadow 0.3s;
+    grid-column: span 2; /* Span across both columns */
 }
 
 .primary-button:hover {
